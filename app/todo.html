@@ -11,10 +11,10 @@
         var todoApp = angular.module("todoApp",[]);
 
         todoApp.filter("checkedItems", function(){
-            return function(items, showComplete){
+            return function(items, bool){
                 var resultArr = [];
                 angular.forEach(items, function(item){
-                    if(item.done == false || showComplete == true){
+                    if(item.done == false || bool == true){
                         resultArr.push(item);
                     }
                 });
